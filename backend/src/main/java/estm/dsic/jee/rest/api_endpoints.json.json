@@ -1,0 +1,65 @@
+{
+    "endpoints": {
+      "create_contact": {
+        "method": "POST",
+        "url": "http://localhost:9040/g-contact/api/contacts",
+        "description": "Endpoint for creating a new contact",
+        "payload": {
+          "nom": "Mohamed",
+          "email": "mohammed06@h.com",
+          "adresse": "Meknes marjane 222",
+          "userId": 1,
+          "tele": "0899776543"
+        }
+      },
+      "update_contact": {
+        "method": "PUT",
+        "url": "http://localhost:9040/g-contact/api/contacts",
+        "description": "Endpoint for updating an existing contact",
+        "payload": {
+          "nom": "Mohamed Amin",
+          "email": "mohammed06@h.com",
+          "adresse": "Meknes marjane 222",
+          "userId": 1,
+          "id": 16,
+          "tele": "0899776543"
+        }
+      },
+      "retrieve_contacts": {
+        "method": "GET",
+        "url": "http://localhost:9040/g-contact/api/contacts",
+        "description": "Endpoint for retrieving contacts for a specific user",
+        "payload": {
+          "userId": 1
+        }
+      },
+      "delete_contact": {
+        "method": "DELETE",
+        "url": "http://localhost:9040/g-contact/api/contacts",
+        "description": "Endpoint for deleting a contact",
+        "payload": {
+          "id": 15
+        }
+      },
+      "admin_operations": {
+        "method": ["PUT", "DELETE", "GET"],
+        "url": "http://localhost:9040/g-contact/api/admin",
+        "description": "Endpoint for admin operations",
+        "payload": {
+          "login": "mohammed06@h.com"
+        }
+      },
+      "user_operations": {
+        "method": ["POST", "GET"],
+        "url": "http://localhost:9040/g-contact/api/users",
+        "description": "Endpoint for user operations",
+        "payload": {
+          "isAdmin": 0,
+          "isValid": 0,
+          "login": "mohammed06@g.com",
+          "password": "123456789"
+        }
+      }
+    }
+  }
+  
